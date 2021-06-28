@@ -1,0 +1,8 @@
+Servlet相关方法的实现与验证  
+1、使用javax.servlet-api  
+2、使用jetty-servlet   
+
+通过配置Tomcat访问，或者通过jetty Server访问     
+tomecat启动后，所有的Servlet都可以通过浏览器访问
+
+根目录到webapp,浏览器访问默认界面是/index.jsp。hello.html位置为/page/hello.html

@@ -8,7 +8,7 @@ import org.eclipse.jetty.servlet.ServletHolder;
 
 /**
  * Created by anjunli on  2021/5/13
- * 通过main方法启动Server
+ * 通过main方法启动Server,通过浏览进行访问 localhost:port
  **/
 public class ApiServer {
     private static Server server;
