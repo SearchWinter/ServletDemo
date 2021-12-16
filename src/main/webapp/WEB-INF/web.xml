@@ -4,4 +4,21 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <!--类名-->
+    <servlet-name>HelloWorld</servlet-name>
+    <!--完全限定名：包名+类名-->
+    <servlet-class>com.upchina.javax.HelloWorld</servlet-class>
+    <load-on-startup>-1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloWorld</servlet-name>
+    <!--访问的网址-->
+    <url-pattern>/test</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HelloWorld</servlet-name>
+    <!--访问的网址-->
+    <url-pattern>/test2</url-pattern>
+  </servlet-mapping>
 </web-app>

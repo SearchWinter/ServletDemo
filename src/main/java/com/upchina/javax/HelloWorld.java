@@ -7,12 +7,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URL;
 
 /**
  * Created by anjunli on  2021/5/13
  * tomcat启动，HttpServlet简单示例
  **/
-@WebServlet("/test")
+//@WebServlet("/test")
+//多重映射
+//@WebServlet(urlPatterns = {"/test","/test2"})
 public class HelloWorld extends HttpServlet {
     private String message;
 
@@ -21,6 +24,16 @@ public class HelloWorld extends HttpServlet {
     {
         // 执行必需的初始化
         message = "Servlet 初始化";
+        ClassLoader contextClassLoader = Thread.currentThread().getContextClassLoader();
+        try {
+            contextClassLoader.loadClass("com.upchina.javax.HelloWorld");
+            System.out.println(contextClassLoader.getClass());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        System.out.println(contextClassLoader);
+        URL resource = Thread.currentThread().getContextClassLoader().getResource("com.upchina.javax.HelloWorld.class");
+        System.out.println("URL:"+resource);
     }
 
     @Override
