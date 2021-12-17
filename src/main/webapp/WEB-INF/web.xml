@@ -4,21 +4,28 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <!--
   <servlet>
-    <!--类名-->
-    <servlet-name>HelloWorld</servlet-name>
-    <!--完全限定名：包名+类名-->
-    <servlet-class>com.upchina.javax.HelloWorld</servlet-class>
+    &lt;!&ndash;servlet名&ndash;&gt;
+    <servlet-name>ServletConfig</servlet-name>
+    &lt;!&ndash;完全限定名：包名+类名&ndash;&gt;
+    <servlet-class>com.upchina.javax.ServletConfigDemo</servlet-class>
     <load-on-startup>-1</load-on-startup>
+    &lt;!&ndash;设置两个初始化参数&ndash;&gt;
+    <init-param>
+      <param-name>name</param-name>
+      <param-value>Servlet初始化设置</param-value>
+    </init-param>
+    <init-param>
+      <param-name>URL</param-name>
+      <param-value>www.baidu.com</param-value>
+    </init-param>
   </servlet>
+
   <servlet-mapping>
-    <servlet-name>HelloWorld</servlet-name>
-    <!--访问的网址-->
-    <url-pattern>/test</url-pattern>
+    <servlet-name>ServletConfig</servlet-name>
+    &lt;!&ndash;访问的网址&ndash;&gt;
+    <url-pattern>/config</url-pattern>
   </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>HelloWorld</servlet-name>
-    <!--访问的网址-->
-    <url-pattern>/test2</url-pattern>
-  </servlet-mapping>
+-->
 </web-app>
